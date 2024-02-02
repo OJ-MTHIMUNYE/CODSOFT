@@ -1,0 +1,629 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+
+}
+
+body{
+
+    background-color:#242124;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    --names-load-time:800ms;
+    --span-load:500ms;
+    --span-load-delay:1500ms;
+    --nav-load-time:400ms;
+    --names-load-delay:100ms; 
+
+}
+
+
+.mydiv{
+    position: relative;
+    height: 100vh;
+    width:100%;
+    background-image: url(R.png);
+    background-position: center;
+    
+}
+
+nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: crimson;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+    animation: load-nav var(--nav-load-time)ease-in;
+    
+
+
+}
+
+nav ul li{
+
+    list-style-type: none;
+    display: inline-block;
+    padding: 30px 20px;
+    text-transform: capitalize;
+    
+    
+}
+
+nav ul li:hover{
+
+    color: blueviolet;
+    background-color: aliceblue;
+    border-radius: 10px;
+    transition: 1s;
+}
+.names{
+
+    
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    color: #00EDDE;
+    animation-fill-mode: forwards;
+    /*opacity: ;*/
+    animation-duration: 400ms;
+    animation: load-names var(--names-load-time) ease-in var(--names-load-delay);
+    
+}
+
+/*names animatin starts here*/
+@keyframes load-names {
+
+    
+    0%{
+
+        transform: translateY(-100%);
+        opacity: 1;
+        visibility: hidden;
+
+    }
+
+    100%{
+
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        
+
+
+    }
+}
+
+/*names animatin ends here*/
+
+.names h4{
+
+    
+    transform: translateX(250%);
+    display: inline-block
+}
+
+/*span load starts here */
+span{
+    color: beige;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    animation-duration: 2s;
+    
+    animation: span-load var(--span-load) ease-in var(--span-load-delay);
+   
+}
+/*span load starts here */
+@keyframes span-load {
+
+
+    0%{
+
+        transform: scale(0);
+        
+        
+        
+
+    }
+
+    100%{
+
+        transform: scale(1);
+    
+      
+    }
+} 
+
+/*span loads ends here */
+.myimg{
+
+   height:10rem ;
+   width: 10rem;
+   border-radius: 50%;
+   position: absolute; 
+   float: right;
+   transform: translateX(-120%);
+}
+
+.sideBar{
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: rgba(210, 197, 200, 0.415);
+    backdrop-filter: blur(15px) ;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sideBar li{
+    width: 100%;
+}
+
+.sideBar a{
+    width: 100%;
+} 
+#actsidebar{
+
+    display: none;
+}
+@media(max-width: 800px){
+
+    .MobilePhone{
+
+        display: none;
+
+    }
+    #actsidebar{
+
+        display: block;
+    }
+
+    @keyframes load-nav {
+
+        0%{
+
+            transform: translateY(-100%);
+
+        }
+        100%{
+
+            transform: translateY(-100%);
+        }
+    }
+
+  /* .Aboutimage{
+
+        height: 300px;
+        width: 300px;
+        margin: 90px 45px;
+        margin-left: 100px;
+        transform: translateX(40%);
+    }*/
+
+
+  
+}
+
+@media(min-width: 1000px){
+
+    .sideBar{
+        width: 100%;
+    }
+
+    @keyframes load-nav {
+
+        0%{
+
+            transform: translateY(-100%);
+
+        }
+        100%{
+
+            transform: translateY(-100%);
+        }
+    }
+    
+}
+
+/*CSS for about section */
+
+.allabout{
+    height: 100vh;
+    width:100%;
+    background-image: url(R.png);
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    
+    
+}
+
+.Aboutimage{
+
+    height: 200px;
+    width: 200px;
+    margin: 80px;
+    left: 99%;
+    padding-top: 60px;
+    margin-left: 100px;
+    transform: translateX(40%);
+    border-radius: 5px;
+    
+}
+
+.Aboutinfo{
+
+    margin-top: 60px;
+    margin-right: 80px;
+    padding-right: 80px;
+    width: 550px;
+    font-size: smaller;
+    transform: translateX(20%);
+    color:  beige;
+    border: #000;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+.theAbout{
+
+    width: 1130px;
+    max-width: 100%;
+    margin: 1px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+.Aboutinfo h1{
+
+
+    margin-top: 20px;
+
+}
+.Aboutinfo h2{
+
+    margin-top: 10px;
+      
+}
+.Aboutinfo p{
+
+    margin-top: 10px;
+    
+}
+.button a {
+
+
+    display: grid;
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 8px;
+    height: 40px;
+    width: 109px;
+    padding-left: 4px;
+    place-items: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+    
+}
+
+
+.button a:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.button a:active {
+    color: #000
+}
+
+.button a:active:after {
+    background: transparent;
+}
+
+.button a:hover:before {
+    opacity: 1;
+}
+
+.button a:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/*my skills css stats here */
+
+.Skillscontainer{
+
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.MySkills{
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.MySkills h2{
+
+    margin: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 28px;
+    color: beige;
+}
+
+.MySkills hr{
+
+    position: relative;
+    width: 80px;
+    height: 4px;
+    border: none;
+    background: #00EDDE;
+
+}
+
+.MySkillsCont{
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+
+
+
+}
+
+.MySkillsCont img{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 10px;
+
+
+}
+
+.MySkillsCont h3{
+
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px;
+
+
+}
+
+.MySkillsCont p{
+
+    font-size: 15px ;
+    color: #fff;
+    line-height: 1.5;
+
+
+}
+
+/*my skills css ends here */
+
+/* *******************************************************************/
+
+/*my Projects css stats here */
+
+
+.ProjectsContainer{
+
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.MyProjects{
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.MyProjects h2{
+
+    margin: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 28px;
+    color: beige;
+}
+
+.MyProjects hr{
+
+    position: relative;
+    width: 80px;
+    height: 4px;
+    border: none;
+    background: #00EDDE;
+
+}
+
+.MyProjectsCont{
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+
+
+
+}
+
+.MyProjectsCont img{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 10px;
+
+
+}
+
+.MyProjectsCont h3{
+
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px;
+
+
+}
+
+.MyProjectsCont p{
+
+    font-size: 15px ;
+    color: #fff;
+    line-height: 1.5;
+
+
+}
+
+
+
+/*my Projects css ends here */
+
+/* ************************************************ */
+
+/* css for footer starts here */
+
+footer{
+
+    background-color: #fc6c85;
+    margin: 30px auto;
+    padding: 30px;
+    width: 100%;
+    
+
+}
+
+.footer{
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.FooterIcons{
+
+
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+
+}
+.FooterIcons a {
+
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+
+}
+
+.copyright{
+
+    text-align: center;
+}
+
+.copyright span{
+
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: 20px;
+}
+
+.FooterIcons a:hover {
+
+    background-color: white;
+    color: #242124;
+    font-size: 30px;
+    border-radius: 50%;
+}
+/* css for footer ends here */
