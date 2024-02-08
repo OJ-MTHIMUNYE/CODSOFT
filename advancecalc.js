@@ -28,7 +28,8 @@ function CalcResults(){
     } 
     catch (error) 
     {
-        alert("Can not use oparators before a number");
+        alert("Invalid input");
+        display.value = "";
         
     }
     
