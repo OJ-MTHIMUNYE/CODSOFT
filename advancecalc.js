@@ -7,7 +7,7 @@ const display = document.querySelector(".restxt");
 const equal = document.querySelector(".eql");
 const Delete = document.querySelector(".Delete");
 const clear = document.querySelector(".clear");
-
+const Dot = document.querySelector(".dot");
 
 
 
@@ -21,7 +21,17 @@ function DisplayValue(numbers){
 
 function CalcResults(){
 
-    display.value = eval(display.value);
+    try {
+
+        display.value = eval(display.value);
+        
+    } 
+    catch (error) 
+    {
+        alert("Can not use oparators before a number");
+        
+    }
+    
 
 
 }
@@ -38,8 +48,14 @@ function Clear(){
     
     
 }
+function DisplayDot(){
+
+        display.value = display.value
+
+}
 
 numbers.addEventListener("click",DisplayValue);
 equal.addEventListener("click",CalcResults);
 Delete.addEventListener("click",DeleteNums);
 clear.addEventListener("click", Clear);
+Dot.addEventListener("click", DisplayDot);
