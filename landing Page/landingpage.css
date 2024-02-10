@@ -6,8 +6,9 @@
 
 body{
 
+    
     height: 100vh;
-    background-image: url(i.jpg) ;
+    background-image: url(i.jpg);
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -17,6 +18,7 @@ body{
 
 header{
 
+    
     
     width: 100%;
     background-color: dimgrey;
@@ -29,6 +31,7 @@ header{
 header h1{
 
 
+    
     text-align: center;
     margin: 30px;
     padding: 25px;
