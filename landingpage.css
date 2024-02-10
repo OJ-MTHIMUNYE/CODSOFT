@@ -1,0 +1,193 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    height: 100vh;
+    background-image: url(i.jpg) ;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+header{
+
+    
+    width: 100%;
+    background-color: dimgrey;
+    display: inline-block;
+   
+
+}
+
+
+header h1{
+
+
+    text-align: center;
+    margin: 30px;
+    padding: 25px;
+    color: azure;
+    text-shadow: 2px -2px 3px rgba(45, 186, 238, 0.492);
+    
+
+}
+
+ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    
+
+}
+
+ul li{
+
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+
+}
+
+ul li a {
+
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+    
+    
+
+}
+
+ul li a:after{
+
+    content: "";
+    position: absolute;
+    background-color: aliceblue;
+    height: 4px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    
+
+
+}
+
+ul li a:hover{
+
+    font-size: larger;
+    color: bisque;
+    text-shadow: 2px -2px 3px rgba(238, 158, 45, 0.492);
+    
+    
+}
+
+ul li a:hover::after{
+
+    width: 100%;
+    
+    
+}
+
+.message{
+
+    width: 550px;
+    color: #969f99d3;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+.message p{
+
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    font-weight: bold;
+    font: 1em;
+    color: black;
+    width: 600px;
+    padding: 13px 13px;
+    background-color: #969f99d3;
+    border-radius: 2px;
+    
+
+
+}
+
+.message p:hover{
+
+
+    font-size: 15px;
+    color: bisque;
+    text-shadow: 2px -2px 3px rgba(238, 158, 45, 0.492);
+}
+
+.button{
+
+    margin:60px auto;
+    display: block;
+    font-size: 30px;
+    text-shadow: 2px -2px 3px rgba(45, 186, 238, 0.492);
+    border-radius: 5px;
+    padding: 9px 8px;
+    border: none;
+    background-color: #969f99d3;
+    cursor: pointer;
+    transform: translateX(35px);
+    transition: 0.2s;
+   
+}
+
+.button:hover{
+
+    font-size: 38px;
+    color: bisque;
+    text-shadow: 2px -2px 3px rgba(238, 158, 45, 0.492);
+    
+
+}
+
+
+
+@media(max-width:800px){
+
+    .message p {
+
+        transform: translateX(80px);
+        width: 400px;
+        display: block;
+    }
+
+    .button{
+
+        transform: translateX(35px);
+
+    }
+
+}
+
+html{
+
+    transition-behavior: smooth;
+}
+
+
