@@ -4,17 +4,8 @@
 const side_bar = document.getElementById("actsidebar");
 const Top_bar = document.getElementById("close");
 const TopLinks = document.querySelector(".MobilePhone");
+const AllDivs = document.querySelectorAll("div");
 
-
-
-function ScrollToAbout(){
-
-
-    window.scrollTo(0,0);
-    alert("about clicked");
-
-
-}
 
 function toggleBar(){
 
@@ -25,7 +16,7 @@ function toggleBar(){
 
 
 }
-side_bar.addEventListener("click", toggleBar);
+
 
 
 function TopBar(){
@@ -39,7 +30,8 @@ function TopBar(){
 
 
 side_bar.addEventListener("click", toggleBar);
+
+side_bar.addEventListener("click", toggleBar);
 Top_bar.addEventListener("click", TopBar);
-about.addEventListener("click", ScrollToAbout);
 
 
